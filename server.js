@@ -31,8 +31,8 @@ app.post('/register',(req,res) =>{register.handleRegister(req,res,pdb,bcrypt)})
 app.get('/profile/:id',(req,res) =>{profile.handleprofile(req,res,pdb)})
 app.put('/image',(req,res)=>{ image.handleimage(req,res,pdb)})
 app.post('/imageurl',(req,res)=>{ image.handleapi(req,res)})
-app.listen(3000,() =>{
-    console.log("app is running");
+app.listen(process.env.PORT ||3000,() =>{
+    console.log(`app is running ${process.env.PORT}`);
 })
 
 
