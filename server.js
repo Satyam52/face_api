@@ -24,7 +24,7 @@ app.use(cors());
    
 
 app.get('/',(req,res)=>{
-    res.send(pdb.users);
+    res.send('it was not working');
 })
 app.post('/signin',(req,res) =>{ signin.handlesignin(req,res,pdb,bcrypt)})
 app.post('/register',(req,res) =>{register.handleRegister(req,res,pdb,bcrypt)})
