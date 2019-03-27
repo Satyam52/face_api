@@ -12,10 +12,8 @@ const image = require('./controller/image');
 const pdb= knex({
         client: 'pg',
         connection: {
-          host : 'postgresql-concave-32302',
-          user : 'postgres',
-          password : '123456',
-          database : 'face_server'
+          host : process.env.DATABASE_URL,
+          ssl:true
         }
       });
 const app = express();
